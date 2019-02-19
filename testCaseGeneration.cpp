@@ -11,12 +11,30 @@ int main() {
 	cin >> case_;
 	switch(case_) {
 		case 1 :
-			int min,max;
-			cout << "Enter Min value of integer ";
-			cin >> min;
-			cout << endl << "Enter Max value of integer ";
+			int max,nmax;
+			cout << endl << "Enter Max value of integer allowed ";
 			cin >> max;
-			cout << endl;
+//			@WTF
+//			cout << endl << "Enter number of input you need ";
+//			cin >> n;
+			cout << endl << "Enter the max values of n allowed";
+			cin >> nmax;
+			bool showTest;
+			cout << "Do you want to display no of test casese. 1 for yes 0 for no ";
+			cin >>showTest;
+			if(showTest) {
+				cout << t << endl;
+			}
+			srand(time(NULL));//for random values every time.Want me to write about it ping me:) on twitter @pariksingh
+			while(t--) {
+				n = rand() % nmax;
+				cout << n << endl;
+				for(int i = 0; i < n; i++) {
+					cout << rand() % max << endl;
+				}
+			}
+			
+			
 			break;
 		case 2 :
 			int arr_ch;
